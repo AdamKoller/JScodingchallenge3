@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Coding Challenge 3</h1>
+    <h3>Adam went to five restaurants and had bills of:
+      $124,$48,$268,$180,and $42</h3>
+    <p> Adam tips 20% if bill is less than $50</p>
+    <p> Adam tips 15% if bill is between $50 and $200</p>
+    <p> Adam tips 10% if bill is more than $200</p>
+    <h4>1) create an object with an array for the bill values</h4>
+    <h4>2) add a method to calculate the tip</h4>
+    <h4>3) the method should include a loop to iterate over all the paid bills and do the tip calculations</h4>
+    <h4>4) as an output, create: </h4>
+      <p>a new array containing all the tips</p>
+      <p>an array containing final paid amount(bill+tip)
+      HINT: start with two empty arrays [] as properties and then fill them up in the loop.</p>
+
+    <script>
+      var restuarant = [124,48,268,180,42];
+      for (i = 0;i < restuarant.length;i++) {
+        if (restuarant[i] > 200) {
+          document.write(restuarant[i] * .10);
+            document.write('-------');
+        } else if (restuarant[i] >= 50 && restuarant[i] <= 200) {
+          document.write(restuarant[i] * .15);
+            document.write('-------');
+        } else {
+          document.write(restuarant[i] * .20);
+            document.write('-------');
+        }
+      };
+
+    </script>
+  </body>
+</html>

@@ -39,10 +39,14 @@
             }
             this.tips[i] = bill * tipPercent;
             this.totalAmount[i] = bill + bill * tipPercent;
+            }
           }
-        }
-      };
-
+        };
+      
+      restuarant.calcTip();
+      document.write(restuarant.tips);
+        document.write('---------');
+      document.write(restuarant.totalAmount);
     </script>
   </body>
 </html>

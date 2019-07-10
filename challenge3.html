@@ -20,17 +20,26 @@
       HINT: start with two empty arrays [] as properties and then fill them up in the loop.</p>
 
     <script>
-      var restuarant = [124,48,268,180,42];
-      for (i = 0;i < restuarant.length;i++) {
-        if (restuarant[i] > 200) {
-          document.write(restuarant[i] * .10);
-            document.write('-------');
-        } else if (restuarant[i] >= 50 && restuarant[i] <= 200) {
-          document.write(restuarant[i] * .15);
-            document.write('-------');
-        } else {
-          document.write(restuarant[i] * .20);
-            document.write('-------');
+        var restuarant = {
+        myBills:[124,48,268,180,42],
+        calcTip: function() {
+          this.tips = [];
+          this.totalAmount = [];
+
+          for (var i = 0;i < this.myBills.length;i++) {
+            var tipPercent;
+            var bill = this.myBills[i];
+
+            if (bill > 200) {
+              tipPercent = .10;
+            } else if (bill >= 50 && bill <= 200) {
+              tipPercent = .15;
+            } else {
+              tipPercent = .20;
+            }
+            this.tips[i] = bill * tipPercent;
+            this.totalAmount[i] = bill + bill * tipPercent;
+          }
         }
       };
 
